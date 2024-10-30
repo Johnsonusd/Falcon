@@ -1,0 +1,115 @@
+* {
+    transition-duration: 0.2s;
+    margin: 0;
+    font-size: medium;
+    text-align: center;
+}
+body {
+    background-color: black;
+}
+.planet {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+#planet1 {
+    top: 100px;
+    left: 50px;
+    background-color: red;
+    color: aliceblue;
+    text-shadow: 0px 5px 10px black;
+}
+#planet1 p {
+    opacity: 0;
+    color: aliceblue;
+}
+#planet2 {
+    top: 300px;
+    left: 450px;
+    background-color: blue;
+    color: aliceblue;
+    text-shadow: 0px 5px 10px black;
+}
+#planet2 p {
+    opacity: 0;
+}
+#planet3 {
+    top: 500px;
+    left: 900px;
+    background-color: aliceblue;
+    color: black;
+    text-shadow: 0px 5px 10px black;
+}
+#planet3 p {
+    opacity: 0;
+}
+#planet4 {
+    top: 100px;
+    left: 1300px;
+    background-color: aqua;
+    color: black;
+    text-shadow: 0px 5px 10px black;
+}
+#planet4 p {
+    opacity: 0;
+}
+.planet {
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.planet:hover {
+    box-shadow: 0 0 50px sandybrown;
+    transform: scale(1.2) translate(0, -20px);
+}
+#planet1:hover p{
+    opacity: 100;
+}
+#planet2:hover p{
+    opacity: 100;
+}
+#planet3:hover p{
+    opacity: 100;  
+}
+#planet4:hover p{
+    opacity: 100;
+}
+
+#falcon {
+    background-image: url(maxresdefault-2690905174-removebg-preview.png);
+    image-rendering: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    animation-name: Lodz;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes Lodz {
+    0% {
+        transform: translate(50px,-100px);
+    }
+    
+    10% {
+        transform: translate(50px, 50px);
+    }
+    30% {
+        transform: translate(450px, 250px);
+    }
+    55% {
+        transform: translate(900px, 450px);
+    }
+    85% {
+        transform: translate(1300px, 25px);}
+    95% {
+        transform: translate(1100px,-100px);}
+    100% {
+        transform: translate(50px, -100px);}
+}
